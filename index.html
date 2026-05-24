@@ -16,6 +16,8 @@
             --text-main: #ffffff;
             --text-muted: #b3b3b3;
             --accent-gold: #ffd700;
+            /* New Premium Positive Color for CTA */
+            --cta-color: #e60050; 
         }
 
         * {
@@ -116,47 +118,46 @@
             font-weight: 700;
         }
 
-        /* CTA Button - Premium Red Style */
+        /* CTA Button - Premium Rose Style (Optimized for 1 Line) */
         .cta-btn {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 22px 30px;
+            padding: 18px 20px;
             margin: 20px 0 30px 0;
 
-            /* Bright red button */
-            background: #ff1a1a;
+            /* Changed to premium matching color */
+            background: var(--cta-color);
 
-            /* Black text */
-            color: #000000;
+            /* White text for better contrast & premium feel */
+            color: #ffffff;
 
             text-decoration: none;
-            font-size: 20px;
-            font-weight: 800;
+            font-size: 18px;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            white-space: nowrap; /* Forces text to stay in 1 line */
 
             border: none;
             border-radius: 24px;
             cursor: pointer;
 
-            /* Strong glowing red shadow */
+            /* Elegant glowing matching shadow */
             box-shadow:
-                0 0 20px rgba(255, 0, 0, 0.6),
-                0 0 40px rgba(255, 0, 0, 0.45),
-                0 0 80px rgba(255, 0, 0, 0.25);
+                0 0 15px rgba(230, 0, 80, 0.4),
+                0 0 30px rgba(230, 0, 80, 0.25);
 
             transition: all 0.3s ease;
         }
 
         .cta-btn:hover {
-            transform: scale(1.03);
-            background: #ff2b2b;
+            transform: scale(1.02);
+            background: #ff0059;
             box-shadow:
-                0 0 25px rgba(255, 0, 0, 0.75),
-                0 0 50px rgba(255, 0, 0, 0.55),
-                0 0 100px rgba(255, 0, 0, 0.35);
+                0 0 20px rgba(230, 0, 80, 0.6),
+                0 0 40px rgba(230, 0, 80, 0.35);
         }
 
         .cta-btn:active {
@@ -164,8 +165,16 @@
         }
 
         .cta-btn i {
-            margin-left: 10px;
-            color: #000000;
+            margin-left: 8px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        @media (max-width: 480px) {
+            .cta-btn {
+                font-size: 15px; /* Ensures it stays in 1 line on very small screens */
+                padding: 16px 15px;
+            }
         }
 
         /* Section Titles */
@@ -394,12 +403,12 @@
 
             <div class="price-container">
                 <span class="old-price">₹299</span>
-                <span class="new-price">₹199 Only</span>
+                <span class="new-price">₹99 Only</span>
             </div>
 
-            <!-- Updated Link Below -->
+            <!-- CTA Button 1: Short text for single line -->
             <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="cta-btn">
-                Claim Your Copy - ₹199 <i class="fa-solid fa-angles-right"></i>
+                Claim Your Copy - ₹99 <i class="fa-solid fa-angles-right"></i>
             </a>
         </section>
 
@@ -457,7 +466,7 @@
                 <div class="bonus-desc">Texting ke zariye attraction build karne ki ultimate art. Jaano kab, kya aur kaise text karna hai taaki samne wala aapke reply ka wait kare.</div>
             </div>
 
-            <!-- Updated Link Below -->
+            <!-- CTA Button 2: Short text for single line -->
             <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="cta-btn">
                 Get Book + All Bonuses <i class="fa-solid fa-angles-right"></i>
             </a>
@@ -525,9 +534,9 @@
         </section>
 
         <footer>
-            <div class="footer-price">Complete Package Just For ₹199</div>
+            <div class="footer-price">Complete Package Just For ₹99</div>
             
-            <!-- Updated Link Below -->
+            <!-- CTA Button 3: Short text for single line -->
             <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="cta-btn">
                 Get Instant Access <i class="fa-solid fa-angles-right"></i>
             </a>
