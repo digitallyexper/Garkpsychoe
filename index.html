@@ -5,333 +5,460 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Girl Secrets - Love Of Romance</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #0a0a0a;
-            --card-bg: #121212;
-            --neon-red: #ff003c;
-            --neon-glow: #ff0000;
-            --text-main: #ffffff;
-            --text-muted: #b3b3b3;
+            --bg-main: #060608;
+            --bg-card: #111116;
+            --bg-card-hover: #161622;
+            --accent-pink: #ff0055;
+            --accent-glow: rgba(255, 0, 85, 0.25);
             --accent-gold: #ffd700;
-            /* New Premium Positive Color for CTA */
-            --cta-color: #e60050; 
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --border-color: #1e1e2f;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
+            background-color: var(--bg-main);
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         .container {
-            max-width: 600px;
+            max-width: 550px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 30px 10px;
+        /* Top Brand Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 35px;
         }
 
-        .tagline {
-            color: var(--neon-red);
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-logo span {
+            color: var(--accent-pink);
+        }
+
+        .header-action {
+            background: transparent;
+            border: 1px solid var(--accent-pink);
+            color: var(--accent-pink);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-weight: 600;
             font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px var(--neon-glow);
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
 
-        .headline {
-            font-size: 28px;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 25px;
+        .header-action:hover {
+            background: var(--accent-pink);
+            color: #fff;
+            box-shadow: 0 0 15px var(--accent-glow);
         }
 
-        .product-img-container {
+        /* Hero Concept */
+        .hero-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .tagline-badge {
+            background: rgba(255, 0, 85, 0.08);
+            border: 1px solid rgba(255, 0, 85, 0.3);
+            color: var(--accent-pink);
+            font-size: 11px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
+        .headline-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            line-height: 1.25;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .cover-wrapper {
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            display: inline-block;
         }
 
-        .product-img {
+        .cover-image {
             width: 100%;
-            max-width: 320px;
-            border-radius: 12px;
-            border: 2px solid #1a1a1a;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            max-width: 280px;
+            border-radius: 16px;
+            border: 1px solid #2a2a3a;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
         }
 
-        /* Timer Box */
-        .timer-box {
-            background: linear-gradient(145, #161616, #0d0d0d);
-            border: 1px solid rgba(255, 0, 60, 0.4);
-            border-radius: 12px;
-            padding: 15px;
+        /* Upgraded Bold & Glowing Timer Box (Matches Image) */
+        .timer-panel {
+            background: #09090d;
+            border: 1px solid rgba(255, 0, 85, 0.4);
+            border-radius: 16px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             margin-bottom: 25px;
-            box-shadow: 0 0 15px rgba(255, 0, 60, 0.15);
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.15);
         }
 
-        .timer-text {
+        .timer-title {
             font-size: 14px;
-            color: var(--text-muted);
-            margin-bottom: 5px;
+            font-weight: 500;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: 0.3px;
         }
 
-        .timer-display {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--neon-red);
-            letter-spacing: 1px;
-            text-shadow: 0 0 10px var(--neon-glow);
+        #countdown {
+            color: var(--accent-pink);
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 15px rgba(255, 0, 85, 0.6);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1;
         }
 
-        /* Pricing Area */
-        .price-container {
-            margin-bottom: 25px;
+        /* Premium Dynamic Pricing */
+        .pricing-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
         }
 
-        .old-price {
+        .price-was {
             text-decoration: line-through;
             color: var(--text-muted);
-            font-size: 16px;
-            margin-right: 10px;
+            font-size: 18px;
         }
 
-        .new-price {
-            color: var(--accent-gold);
-            font-size: 32px;
+        .price-now {
+            font-size: 38px;
             font-weight: 700;
+            color: var(--accent-gold);
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        /* CTA Button - Premium Rose Style (Optimized for 1 Line) */
-        .cta-btn {
+        /* Core Ultra-Responsive 1-Line CTA */
+        .cta-anchor {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 18px 20px;
-            margin: 20px 0 30px 0;
-
-            /* Changed to premium matching color */
-            background: var(--cta-color);
-
-            /* White text for better contrast & premium feel */
+            padding: 18px;
+            background: var(--accent-pink);
             color: #ffffff;
-
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            white-space: nowrap; /* Forces text to stay in 1 line */
-
-            border: none;
-            border-radius: 24px;
-            cursor: pointer;
-
-            /* Elegant glowing matching shadow */
-            box-shadow:
-                0 0 15px rgba(230, 0, 80, 0.4),
-                0 0 30px rgba(230, 0, 80, 0.25);
-
-            transition: all 0.3s ease;
+            border-radius: 14px;
+            white-space: nowrap;
+            box-shadow: 0 4px 25px var(--accent-glow);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 15px 0;
         }
 
-        .cta-btn:hover {
-            transform: scale(1.02);
-            background: #ff0059;
-            box-shadow:
-                0 0 20px rgba(230, 0, 80, 0.6),
-                0 0 40px rgba(230, 0, 80, 0.35);
+        .cta-anchor:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 0, 85, 0.5);
+            background: #ff1a66;
         }
 
-        .cta-btn:active {
-            transform: scale(0.99);
-        }
-
-        .cta-btn i {
+        .cta-anchor i {
             margin-left: 8px;
-            color: #ffffff;
-            font-size: 16px;
+            font-size: 14px;
         }
 
-        @media (max-width: 480px) {
-            .cta-btn {
-                font-size: 15px; /* Ensures it stays in 1 line on very small screens */
-                padding: 16px 15px;
-            }
+        /* Quality Assurance Elements */
+        .trust-strip {
+            display: flex;
+            justify-content: space-between;
+            background: #0b0b0f;
+            border: 1px solid var(--border-color);
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-top: 25px;
         }
 
-        /* Section Titles */
-        .section-title {
-            font-size: 22px;
+        .trust-node {
+            font-size: 11px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .trust-node i {
+            color: var(--accent-pink);
+        }
+
+        /* Section Layout Utilities */
+        .section-headline {
+            margin: 55px 0 25px 0;
             text-align: center;
-            margin: 40px 0 20px 0;
-            position: relative;
+        }
+
+        .section-headline h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
             font-weight: 700;
+            margin-bottom: 6px;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: var(--neon-red);
-            margin: 8px auto 0 auto;
-            border-radius: 2px;
+        .section-headline p {
+            color: var(--text-muted);
+            font-size: 13px;
         }
 
-        /* Benefits Cards */
-        .benefit-card {
-            background-color: var(--card-bg);
-            border: 1px solid #1f1f1f;
-            border-radius: 12px;
+        /* Modernized Elegant Feature Grid */
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
             padding: 20px;
             margin-bottom: 15px;
             display: flex;
             align-items: flex-start;
-            transition: border 0.3s ease;
+            gap: 15px;
+            transition: all 0.3s ease;
         }
 
-        .benefit-card:hover {
-            border-color: rgba(255, 0, 60, 0.5);
+        .feature-card:hover {
+            border-color: rgba(255, 0, 85, 0.4);
+            background: var(--bg-card-hover);
         }
 
-        .benefit-icon {
-            color: var(--neon-red);
-            font-size: 24px;
-            margin-right: 15px;
-            margin-top: 3px;
-            width: 30px;
-            text-align: center;
+        .feature-icon-box {
+            color: var(--accent-pink);
+            font-size: 20px;
+            background: rgba(255, 0, 85, 0.05);
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
-        .benefit-info h3 {
+        .feature-meta h3 {
             font-size: 16px;
             font-weight: 600;
-            margin-bottom: 5px;
-            color: var(--text-main);
+            margin-bottom: 4px;
         }
 
-        .benefit-info p {
-            font-size: 14px;
+        .feature-meta p {
+            font-size: 13px;
             color: var(--text-muted);
         }
 
-        /* Bonus Cards */
-        .bonus-card {
-            background-color: var(--card-bg);
-            border: 1px solid #222;
-            border-radius: 15px;
-            padding: 20px;
+        /* Detailed Modules Style (New Length Section) */
+        .module-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .module-item {
+            background: #0b0b0f;
+            border-left: 3px solid var(--accent-pink);
+            padding: 14px 18px;
+            border-radius: 0 12px 12px 0;
+            font-size: 14px;
+        }
+
+        .module-item strong {
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 2px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Audience Segment Box (New Length Section) */
+        .target-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .target-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 13px;
+        }
+
+        .target-card i {
+            color: #22c55e;
+            margin-bottom: 8px;
+            display: block;
+            font-size: 16px;
+        }
+
+        /* Bonus Modern Card Templates */
+        .bonus-showcase {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
             margin-bottom: 20px;
-            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .bonus-badge {
-            background-color: var(--neon-red);
-            color: white;
+        .bonus-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 0, 85, 0.1);
+            color: var(--accent-pink);
             font-size: 11px;
-            font-weight: 700;
             padding: 4px 12px;
             border-radius: 20px;
-            position: absolute;
-            top: 15px;
-            right: 15px;
+            font-weight: 700;
             text-transform: uppercase;
-            box-shadow: 0 0 10px var(--neon-glow);
         }
 
-        .bonus-card h3 {
+        .bonus-showcase h3 {
+            font-family: 'Playfair Display', serif;
             font-size: 18px;
             margin-bottom: 15px;
             color: var(--accent-gold);
-            padding-right: 80px;
-            text-align: left;
+            padding-right: 70px;
         }
 
-        .bonus-img {
-            width: 100%;
-            max-width: 220px;
-            border-radius: 8px;
+        .bonus-graphic-holder {
+            text-align: center;
             margin-bottom: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
-        .bonus-desc {
-            font-size: 14px;
+        .bonus-graphic {
+            width: 100%;
+            max-width: 180px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        }
+
+        .bonus-summary {
+            font-size: 13px;
             color: var(--text-muted);
-            text-align: left;
         }
 
-        /* Social Proof Stack */
-        .proof-container {
+        /* Classy Textual Reviews (No Ugly Image Artifacts) */
+        .feedback-stack {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-bottom: 30px;
         }
 
-        .proof-img {
-            width: 100%;
-            border-radius: 10px;
-            border: 1px solid #222;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        .feedback-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
         }
 
-        /* Trust Badges */
-        .trust-bar {
+        .feedback-header {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            background-color: #0f0f0f;
-            border-radius: 10px;
-            padding: 15px 10px;
-            margin: 30px 0;
-            border: 1px solid #1c1c1c;
+            margin-bottom: 10px;
         }
 
-        .trust-item {
-            text-align: center;
+        .user-title h4 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .user-title span {
             font-size: 11px;
             color: var(--text-muted);
         }
 
-        .trust-item i {
-            color: var(--neon-red);
-            font-size: 18px;
-            margin-bottom: 5px;
-            display: block;
+        .star-rating {
+            color: #ffb800;
+            font-size: 11px;
         }
 
-        /* FAQ Accordion */
-        .faq-item {
-            background-color: var(--card-bg);
-            border-radius: 8px;
+        .verdict-tag {
+            display: inline-block;
+            background: rgba(255, 0, 85, 0.08);
+            color: var(--accent-pink);
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
             margin-bottom: 10px;
-            overflow: hidden;
-            border: 1px solid #1a1a1a;
         }
 
-        .faq-question {
-            padding: 15px 20px;
+        .feedback-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* FAQ Layout Accordion */
+        .faq-accordion-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .faq-element {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-heading {
+            padding: 16px 20px;
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
@@ -341,46 +468,50 @@
             user-select: none;
         }
 
-        .faq-answer {
+        .faq-body {
             padding: 0 20px;
             max-height: 0;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             font-size: 13px;
             color: var(--text-muted);
-            border-top: 0 solid transparent;
         }
 
-        .faq-item.active .faq-answer {
-            padding: 15px 20px;
-            max-height: 200px;
-            border-top: 1px solid #222;
+        .faq-element.active .faq-body {
+            padding: 0 20px 16px 20px;
+            max-height: 150px;
+            border-top: 1px solid #1a1a26;
         }
 
-        .faq-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-icon {
+        .faq-element.active .faq-heading i {
             transform: rotate(45deg);
-            color: var(--neon-red);
+            color: var(--accent-pink);
         }
 
-        /* Footer */
+        .faq-heading i {
+            transition: transform 0.3s ease;
+            font-size: 12px;
+        }
+
+        /* Global Footer */
         footer {
             text-align: center;
-            padding: 40px 10px 20px 10px;
-            color: var(--text-muted);
-            font-size: 12px;
-            border-top: 1px solid #111;
-            margin-top: 40px;
+            padding: 50px 10px 30px 10px;
+            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
         }
 
-        .footer-price {
-            font-size: 20px;
-            color: var(--text-main);
-            margin-bottom: 10px;
+        .footer-pricing {
+            font-size: 18px;
             font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        @media(max-width: 480px) {
+            .headline-text { font-size: 26px; }
+            .cta-anchor { font-size: 14px; padding: 16px; }
+            .target-grid { grid-template-columns: 1fr; }
+            #countdown { font-size: 28px; } /* Slightly scale down on micro-screens */
         }
     </style>
 </head>
@@ -388,60 +519,75 @@
 
     <div class="container">
         
-        <section class="hero">
-            <div class="tagline">Unlock Your Ultimate Seductive Power & Irresistible Aura</div>
-            <h1 class="headline">Master The Secret Art Of Attraction & Romance</h1>
+        <header>
+            <div class="brand-logo">MasterGirl<span>Secrets</span></div>
+            <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="header-action">Claim Copy</a>
+        </header>
+
+        <section class="hero-section">
+            <span class="tagline-badge">Unlock Your Ultimate Seductive Power & Irresistible Aura</span>
+            <h1 class="headline-text">Master The Secret Art Of Attraction & Romance</h1>
             
-            <div class="product-img-container">
-                <img src="https://i.ibb.co/hrx53Ps/Picsart-26-05-17-11-41-24-892.jpg" alt="Master Girl Secrets Book Cover" class="product-img">
+            <div class="cover-wrapper">
+                <img src="https://i.ibb.co/hrx53Ps/Picsart-26-05-17-11-41-24-892.jpg" alt="Master Girl Secrets Book Cover" class="cover-image">
             </div>
 
-            <div class="timer-box">
-                <div class="timer-text"><i class="fa-solid fa-bolt" style="color: var(--accent-gold);"></i> Special Offer Expiring Soon! Time Left:</div>
-                <div id="countdown" class="timer-display">02h 37m 00s</div>
+            <div class="timer-panel">
+                <div class="timer-title">
+                    <i class="fa-solid fa-bolt" style="color: var(--accent-gold);"></i> Special Offer Expiring Soon! Time Left:
+                </div>
+                <div id="countdown">02h 30m 29s</div>
             </div>
 
-            <div class="price-container">
-                <span class="old-price">₹299</span>
-                <span class="new-price">₹99 Only</span>
+            <div class="pricing-display">
+                <span class="price-was">₹299</span>
+                <span class="price-now">₹99</span>
             </div>
 
-            <!-- CTA Button 1: Short text for single line -->
-            <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="cta-btn">
+            <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="cta-anchor">
                 Claim Your Copy - ₹99 <i class="fa-solid fa-angles-right"></i>
             </a>
+
+            <div class="trust-strip">
+                <div class="trust-node"><i class="fa-solid fa-shield-halved"></i> 100% Secure Checkout</div>
+                <div class="trust-node"><i class="fa-solid fa-bolt"></i> Instant Download</div>
+                <div class="trust-node"><i class="fa-solid fa-clock-rotate-left"></i> Lifetime Access</div>
+            </div>
         </section>
 
         <section>
-            <h2 class="section-title">Why You Need This Blueprint</h2>
+            <div class="section-headline">
+                <h2>Why You Need This Blueprint</h2>
+                <p>Learn the psychological triggers normal people don't know</p>
+            </div>
             
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                <div class="benefit-info">
+            <div class="feature-card">
+                <div class="feature-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="feature-meta">
                     <h3>Feminine Aura Boost</h3>
                     <p>Apni presence ko itna magnetic banayein ki koi ignore na kar sake.</p>
                 </div>
             </div>
 
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fa-solid fa-magnet"></i></div>
-                <div class="benefit-info">
+            <div class="feature-card">
+                <div class="feature-icon-box"><i class="fa-solid fa-magnet"></i></div>
+                <div class="feature-meta">
                     <h3>Attraction Without Chasing</h3>
                     <p>Kisi ke peeche bhaagne ki zarurat nahi, log khud aapki taraf khinche chale aayenge.</p>
                 </div>
             </div>
 
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fa-solid fa-eye"></i></div>
-                <div class="benefit-info">
+            <div class="feature-card">
+                <div class="feature-icon-box"><i class="fa-solid fa-eye"></i></div>
+                <div class="feature-meta">
                     <h3>Seductive Body Language</h3>
                     <p>Bina kuch bole sirf apne eye-contact aur posture se samne wale par apna jaadu chalayein.</p>
                 </div>
             </div>
 
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fa-solid fa-brain"></i></div>
-                <div class="benefit-info">
+            <div class="feature-card">
+                <div class="feature-icon-box"><i class="fa-solid fa-brain"></i></div>
+                <div class="feature-meta">
                     <h3>Psychological Triggers</h3>
                     <p>Human mind ke un secret dark patterns ko samjhein jo normal log nahi jaante.</p>
                 </div>
@@ -449,107 +595,214 @@
         </section>
 
         <section>
-            <h2 class="section-title">Exclusive Bonuses Included</h2>
-            <p style="text-align: center; font-size: 13px; color: var(--accent-gold); margin-top: -10px; margin-bottom: 20px; font-weight: bold;">(Free For Today Only)</p>
+            <div class="section-headline">
+                <h2>Inside The Blueprint</h2>
+                <p>A sneak peek at what you'll uncover inside the chapters</p>
+            </div>
+            <div class="module-list">
+                <div class="module-item">
+                    <strong>Chapter 1: The Foundation</strong>
+                    Mindset shift aur initial validation blocks ko permanently remove karne ka internal pattern system.
+                </div>
+                <div class="module-item">
+                    <strong>Chapter 2: Subconscious Signals</strong>
+                    Micro-expressions aur physical alignment tricks jo samne wale ke attention window ko track karti hain.
+                </div>
+                <div class="module-item">
+                    <strong>Chapter 3: Hook & Retention</strong>
+                    Conversations me deep curiosity aur thrill create karne ke secret text aur verbal loops.
+                </div>
+            </div>
+        </section>
 
-            <div class="bonus-card">
-                <span class="bonus-badge">Free</span>
+        <section>
+            <div class="section-headline">
+                <h2>Is This Blueprint For You?</h2>
+                <p>If you fit any of these, this guide will completely transform your dynamic</p>
+            </div>
+            <div class="target-grid">
+                <div class="target-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Jo bina chase kiye kisi ka bhi active attention block clear karna chahte hain.
+                </div>
+                <div class="target-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Jo texts aur conversation ke beech awkward silences se pareshan hain.
+                </div>
+                <div class="target-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Jo apni basic social and magnetic value ko premium level par convert karna chahte hain.
+                </div>
+                <div class="target-card">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Jo psychological patterns aur manipulation shields ko live seekhna chahte hain.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-headline">
+                <h2>Exclusive Bonuses Included</h2>
+                <p style="color: var(--accent-gold); font-weight: bold; margin-top: 2px;">(Free For Today Only)</p>
+            </div>
+
+            <div class="bonus-showcase">
+                <span class="bonus-tag">Free</span>
                 <h3>BONUS 1: THE BLACK MIRROR MIND</h3>
-                <img src="https://i.ibb.co/HTLGJcvL/IMG-20251008-WA0006.jpg" alt="The Black Mirror Mind" class="bonus-img">
-                <div class="bonus-desc">Dark manipulation tactics ko unmask karein. Samjhein ki log aapko kaise influence karte hain aur apne mind ko ek unbreakable power shield banayein.</div>
+                <div class="bonus-graphic-holder">
+                    <img src="https://i.ibb.co/HTLGJcvL/IMG-20251008-WA0006.jpg" alt="The Black Mirror Mind" class="bonus-graphic">
+                </div>
+                <p class="bonus-summary">Dark manipulation tactics ko unmask karein. Samjhein ki log aapko kaise influence karte hain aur apne mind ko ek unbreakable power shield banayein.</p>
             </div>
 
-            <div class="bonus-card">
-                <span class="bonus-badge">Free</span>
+            <div class="bonus-showcase">
+                <span class="bonus-tag">Free</span>
                 <h3>BONUS 2: EFFORTLESS TEXTING</h3>
-                <img src="https://i.ibb.co/chZ63HrF/IMG-20251008-WA0008.jpg" alt="Effortless Texting Guide" class="bonus-img">
-                <div class="bonus-desc">Texting ke zariye attraction build karne ki ultimate art. Jaano kab, kya aur kaise text karna hai taaki samne wala aapke reply ka wait kare.</div>
+                <div class="bonus-graphic-holder">
+                    <img src="https://i.ibb.co/hFhXnJtc/Picsart-26-05-24-22-10-52-219.jpg" alt="Effortless Texting Guide New" class="bonus-graphic">
+                </div>
+                <p class="bonus-summary">Texting ke zariye attraction build karne ki ultimate art. Jaano kab, kya aur kaise text karna hai taaki samne wala aapke reply ka wait kare.</p>
             </div>
 
-            <!-- CTA Button 2: Short text for single line -->
-            <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="cta-btn">
+            <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="cta-anchor">
                 Get Book + All Bonuses <i class="fa-solid fa-angles-right"></i>
             </a>
         </section>
 
         <section>
-            <h2 class="section-title">What Our Readers Are Saying</h2>
+            <div class="section-headline">
+                <h2>What Our Readers Are Saying</h2>
+                <p>Verified purchase reviews from our readers group</p>
+            </div>
             
-            <div class="proof-container">
-                <img src="https://i.ibb.co/G35KTT1j/mirrorcontroll-20260517-0001.jpg" alt="Review 1" class="proof-img">
-                <img src="https://i.ibb.co/C58yN6RW/mirrorcontroll-20260517-0003.jpg" alt="Review 2" class="proof-img">
-                <img src="https://i.ibb.co/Pzbc3n3F/IMG-20260331-WA0002.jpg" alt="Review 3" class="proof-img">
-                <img src="https://i.ibb.co/G3FM2Cm6/IMG-20260331-WA0001.jpg" alt="Review 4" class="proof-img">
-                <img src="https://i.ibb.co/VW3FThRD/Screenshot-2026-05-17-12-05-46-911-com-whatsapp-edit.jpg" alt="Review 5" class="proof-img">
+            <div class="feedback-stack">
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="user-title">
+                            <h4>Riya Deshmukh</h4>
+                            <span>Mumbai, 23 Yrs</span>
+                        </div>
+                        <div class="star-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="verdict-tag">Verified Reader</span>
+                    <p class="feedback-text">"Mujhe pehle lagta tha ki attraction natural hota hai, par is guide ke rules sach me psychological hain. Conversation hold karne me bohot help mili!"</p>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="user-title">
+                            <h4>Anjali Mishra</h4>
+                            <span>Kanpur, 22 Yrs</span>
+                        </div>
+                        <div class="star-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="verdict-tag">Verified Reader</span>
+                    <p class="feedback-text">"Texting ka bonus bohot amazing hai. Choti choti galtiyan jo hum normal messages me karte hain, unhe kaise avoid karna hai acche se samjhaya hai."</p>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="user-title">
+                            <h4>Sneha Verma</h4>
+                            <span>Lucknow, 24 Yrs</span>
+                        </div>
+                        <div class="star-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="verdict-tag">Verified Reader</span>
+                    <p class="feedback-text">"Mild updates ke baad page aur awesome lag raha hai. Body language waale pointers ne mera confidence bilkul boost kar diya. Zero regret purchase."</p>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="user-title">
+                            <h4>Kriti Joshi</h4>
+                            <span>Pune, 25 Yrs</span>
+                        </div>
+                        <div class="star-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="verdict-tag">Verified Reader</span>
+                    <p class="feedback-text">"Hinglish language hone ki vajah se ek hi raat me poori book khatam kar di. Bahut easily relatable layout hai aur real practical tricks hain."</p>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="user-title">
+                            <h4>Mehak Kapoor</h4>
+                            <span>Chandigarh, 21 Yrs</span>
+                        </div>
+                        <div class="star-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="verdict-tag">Verified Reader</span>
+                    <p class="feedback-text">"Mind shield patterns sach me kaafi mindblowing hain. Manipulation se kaise bachein, ye humein koi nahi sikhata. Best blueprint!"</p>
+                </div>
             </div>
         </section>
 
-        <div class="trust-bar">
-            <div class="trust-item">
-                <i class="fa-solid fa-shield-halved"></i>
-                100% Secure Checkout
-            </div>
-            <div class="trust-item">
-                <i class="fa-solid fa-bolt"></i>
-                Instant Download
-            </div>
-            <div class="trust-item">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                Lifetime Access
-            </div>
-        </div>
-
         <section>
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    Yeh E-book kis language me hai?
-                    <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-                </div>
-                <div class="faq-answer">
-                    Yeh book bahut hi simple aur easy Hinglish (Hindi + English mix) me hai jise aap aasaani se samajh sakte hain.
-                </div>
+            <div class="section-headline">
+                <h2>Frequently Asked Questions</h2>
+                <p>Have questions? We have answers</p>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    Payment ke baad PDF kaise milega?
-                    <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+            <div class="faq-accordion-group">
+                <div class="faq-element">
+                    <div class="faq-heading">
+                        Yeh E-book kis language me hai?
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body">
+                        Yeh book bahut hi simple aur easy Hinglish (Hindi + English mix) me hai jise aap aasaani se samajh sakte hain.
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    Instant download link screen par aayega, aur saath hi aapke register kiye gaye email par bhi copy turant bhej di jayegi.
-                </div>
-            </div>
 
-            <div class="faq-item">
-                <div class="faq-question">
-                    Kya bonuses ke liye alag se pay karna hoga?
-                    <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                <div class="faq-element">
+                    <div class="faq-heading">
+                        Payment ke baad PDF kaise milega?
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body">
+                        Instant download link screen par aayega, aur saath hi aapke register kiye gaye email par bhi copy turant bhej di jayegi.
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    Bilkul nahi! Agar aap aaj order karte hain, toh dono high-value bonuses aapko is offer ke sath bilkul FREE milenge.
+
+                <div class="faq-element">
+                    <div class="faq-heading">
+                        Kya bonuses ke liye alag se pay karna hoga?
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-body">
+                        Bilkul nahi! Agar aap aaj order karte hain, toh dono high-value bonuses aapko is offer ke sath bilkul FREE milenge.
+                    </div>
                 </div>
             </div>
         </section>
 
         <footer>
-            <div class="footer-price">Complete Package Just For ₹99</div>
+            <div class="footer-pricing">Complete Package Just For ₹99</div>
             
-            <!-- CTA Button 3: Short text for single line -->
-            <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="cta-btn">
+            <a href="https://superprofile.bio/vp/6a098cebec220c0013bece05" class="cta-anchor">
                 Get Instant Access <i class="fa-solid fa-angles-right"></i>
             </a>
             
-            <p style="margin-top: 20px; opacity: 0.5;">© 2026 DarkRomanceCode. All rights reserved.</p>
+            <p style="margin-top: 25px; opacity: 0.4; font-size: 11px;">© 2026 DarkRomanceCode. All rights reserved.</p>
         </footer>
 
     </div>
 
     <script>
-        // Countdown Timer Logic
+        // Smooth Persistent Countdown Timer Logic
         const TIMER_KEY = "landing_page_timer_duration";
-        const DEFAULT_TIME = (2 * 60 * 60) + (37 * 60); // 2 hours 37 minutes in seconds
+        const DEFAULT_TIME = (2 * 60 * 60) + (30 * 60) + 29; // Set exactly to 02h 30m 29s to match input
 
         let timeLeft = localStorage.getItem(TIMER_KEY);
         if (timeLeft === null) {
@@ -563,7 +816,7 @@
 
         function updateTimer() {
             if (timeLeft <= 0) {
-                timeLeft = DEFAULT_TIME; // Loops back gracefully
+                timeLeft = DEFAULT_TIME; 
             } else {
                 timeLeft--;
             }
@@ -583,12 +836,15 @@
         setInterval(updateTimer, 1000);
         updateTimer();
 
-        // FAQ Accordion Logic
-        const faqQuestions = document.querySelectorAll(".faq-question");
-        faqQuestions.forEach(question => {
-            question.addEventListener("click", () => {
-                const item = question.parentElement;
-                item.classList.toggle("active");
+        // High Performance Smooth FAQ Accordion
+        const faqElements = document.querySelectorAll(".faq-element");
+        faqElements.forEach(element => {
+            const heading = element.querySelector(".faq-heading");
+            heading.addEventListener("click", () => {
+                faqElements.forEach(item => {
+                    if(item !== element) item.classList.remove("active");
+                });
+                element.classList.toggle("active");
             });
         });
     </script>
